@@ -1,4 +1,9 @@
 *** Settings ***
+Documentation   Test Case que valida que não ofertaremos produtos em localidades não cobertas por nossa área de entrega.
+...             Com essa validação, evitamos um possível descontentamento de um cliente
+...             que seguiu todo o fluxo de compra e somente no final tem a informação
+...             de que não poderemos efetuar a entrega do produto.
+
 Resource    ../pages/home_page.robot
 
 Test Setup      Start Session

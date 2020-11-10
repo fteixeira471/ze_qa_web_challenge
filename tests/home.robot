@@ -1,4 +1,8 @@
 *** Settings ***
+Documentation   Test Case que valida que um cliente com menos de 18 anos não consegue usar nossos serviços.
+...             Importante validar que um menor de idade não consegue comprar bebidas alcóolicas
+...             para evitar possíveis ações judiciais.
+
 Resource    ../pages/home_page.robot
 
 Test Setup      Start Session

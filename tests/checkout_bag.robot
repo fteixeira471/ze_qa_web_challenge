@@ -1,4 +1,8 @@
 *** Settings ***
+Documentation   Test Case que valida a adição de um produto a sacola de compras.
+...             Caso o cliente tenha alguma dificuldade nesse fluxo, deixaremos
+...             de vender nossos produtos (teste essencial em qualquer e-commerce).
+
 Resource    ../pages/home_page.robot
 Resource    ../pages/products_page.robot
 Resource    ../pages/delivery_product_page.robot
