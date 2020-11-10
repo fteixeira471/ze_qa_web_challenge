@@ -52,13 +52,13 @@ webdrivermanager chrome
 ## **Executando a Automação**
 Ainda no terminal e dentro da pasta raiz do projeto (_ze_qa_web_challenge_):
 ```
-> Para executar todos os testes com reports no próprio terminal:
-robot tests
+> Para executar todos os testes:
+robot -d ./results tests
 
-> Para executar um cenário de teste específico com reports no próprio terminal:
-robot -i checkout_bag tests
-robot -i not_available tests
-robot -i address_not_exist tests
+> Para executar um cenário de teste específico:
+robot -d ./results -i checkout_bag tests
+robot -d ./results -i not_available tests
+robot -d ./results -i address_not_exist tests
 ```
 
 * **para fechar o ambiente virtual, execute o comando ```exit``` no terminal**
@@ -66,13 +66,8 @@ robot -i address_not_exist tests
 
 
 
-## **Screenshots e Report em HTML**
-Ao final da execução do cenário de teste, é tirada uma screenshot da página como evidência. Para gerar um relatório em formato html, basta adicionar o parâmetro "```-d ./results```". Exemplos:
-
-```robot -d ./results tests``` (_executará todos os testes e armazenará as screenshots e reports dentro da pasta results_)
-
-```robot -d ./results -i address_not_exist tests``` (_executará todos os testes com a tag "address_not_exist" e armazenará as screenshots e reports dentro da pasta results_)
-
+## **Organização das Screenshots e Reports**
+Em toda a execução dos testes são gerados relatórios tanto no terminal quanto em arquivos html/xml. Para manter a organização desses arquivos e não poluir a pasta raiz do projeto, é importante informar o parâmetro "```-d ./results```" (_conforme os exemplos no tópico acima_). Deste modo, as evidências serão armazenadas conforme a estrutura abaixo:
 ```
 ze_qa_web_challenge
 └── results
