@@ -8,6 +8,7 @@ Test Teardown   Screenshot And Close Session
 
 *** Test Cases ***
 Add first product to checkout bag
+  [tags]    checkout_bag
   Set Address Available Delivery
   
   ${elements}=    Get WebElements   ${list_products_name}
